@@ -60,7 +60,7 @@ if [ "$color_prompt" = yes ]; then
     if [[ ${EUID} == 0 ]] ; then
         PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
     else
-        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\] \[\033[01;34m\]\w \$\[\033[00m\] '
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[01;33m\]\u@\h:\[\033[01;37m\]\W$\[\033[00m\] '
     fi
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h \w \$ '
@@ -86,6 +86,8 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+
+    alias less='less -R'
 fi
 
 # colored GCC warnings and errors
@@ -127,6 +129,16 @@ fi
 
 alias miniserv="ssh joneil@192.168.1.140"
 alias torrents="transmission-remote-cli -c 192.168.1.140"
+
+alias ls='ls --color'
+alias dir='dir --color=auto'
+alias vdir='vdir --color=auto'
+           
+alias grep='grep --color=auto'
+alias fgrep='fgrep --color=auto'
+alias egrep='egrep --color=auto'
+                          
+alias less='less -R'
 
 
 # choose a default terminal
