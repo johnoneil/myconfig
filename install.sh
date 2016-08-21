@@ -16,3 +16,4 @@ cp ${DIRCOLORS} ${HOME}/
 
 #install ranger file manager conf
 cp ${RANGER} ${HOME}/.config/ranger/
+
