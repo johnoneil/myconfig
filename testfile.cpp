@@ -5,11 +5,23 @@
 class Person: public entity
 {
 :public
-  int getsomevalue(const arg& 1, const arg* 2)
+  int whut(){return 0;}
+
+  int GetSomeValue(const arg* one, const arg* two)
   {
-    return null;
+    return 0;
   }
 
+  void CallNothing():const
+  {
+    //nothing to see here
+  }
+
+
+  int CallSomething()
+  {
+    return GetSomeValue(null, null);
+  }
 
 }
 

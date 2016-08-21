@@ -3,7 +3,7 @@
 BASHRC=.bashrc
 VIMRC=.vimrc
 DIRCOLORS=.dircolors
-RANGER=.rc.conf
+RANGER=rc.conf
 
 #install our current bashrc
 cp ${BASHRC} ${HOME}/
@@ -15,4 +15,4 @@ cp ${VIMRC} ${HOME}/
 cp ${DIRCOLORS} ${HOME}/
 
 #install ranger file manager conf
-cp ${RANGER} ${HOME}/.conf/ranger/
+cp ${RANGER} ${HOME}/.config/ranger/

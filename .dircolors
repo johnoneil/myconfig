@@ -48,7 +48,7 @@ TERM xterm*
 #NORMAL 00 # no color code at all
 #FILE 00 # regular file: use no color at all
 RESET 0 # reset to "normal" color
-DIR 34 # directory
+DIR 01;33 # directory
 LINK 01;32 # symbolic link. (If you set this to 'target' instead of a
  # numerical value, the color is as for the file pointed to.)
 MULTIHARDLINK 00 # regular file with more than one link
@@ -94,7 +94,7 @@ EXEC 01;36
 .txz 31
 .tzo 31
 .t7z 31
-.zip 31
+#.zip 31
 .z 31
 .Z 31
 .dz 31
@@ -114,7 +114,7 @@ EXEC 01;36
 .war 31
 .ear 31
 .sar 31
-.rar 31
+#.rar 31
 .alz 31
 .ace 31
 .zoo 31
@@ -123,8 +123,10 @@ EXEC 01;36
 .rz 31
 .cab 31
 # comic related formats
-.cbr 36
-.cbz 36
+.cbr 32
+.cbz 32
+.rar 32
+.zip 32
 # torrent related formats
 .tor 30;46
 .torrent 30;46
@@ -148,38 +150,38 @@ EXEC 01;36
 .mng 35
 .pcx 35
 # Video formats
-.mov 32
-.mpg 32
-.mpeg 32
-.m2v 32
-.mkv 32
-.webm 32
-.ogm 32
-.mp4 32
-.m4v 32
-.mp4v 32
-.ts 32
-.vob 32
-.qt 32
-.nuv 32
-.wmv 32
-.asf 32
-.rm 32
-.rmvb 32
-.flc 32
-.avi 32
-.fli 32
-.flv 32
-.gl 32
-.dl 32
-.xcf 32
-.xwd 32
-.yuv 32
-.cgm 32
-.emf 32
+.mov 34
+.mpg 34
+.mpeg 34
+.m2v 34
+.mkv 34
+.webm 34
+.ogm 34
+.mp4 34
+.m4v 34
+.mp4v 34
+.ts 34
+.vob 34
+.qt 34
+.nuv 34
+.wmv 34
+.asf 34
+.rm 34
+.rmvb 34
+.flc 34
+.avi 34
+.fli 34
+.flv 34
+.gl 34
+.dl 34
+.xcf 34
+.xwd 34
+.yuv 34
+.cgm 34
+.emf 34
 # http://wiki.xiph.org/index.php/MIME_Types_and_File_Extensions
-.ogv 32
-.ogx 32
+.ogv 34
+.ogx 34
 # audio formats
 .aac 00;36
 .au 00;36
