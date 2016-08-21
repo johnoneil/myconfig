@@ -145,3 +145,6 @@ alias less='less -R'
 # under i3, i3-sensible-terminal uses x-terminal-emulator, urxvt, rxvt, terminator etc
 # in that order UNLESS $TERMINAL is set
 export TERMINAL=gnome-terminal
+
+# source emscripten sdk setup
+source /home/on-three/code/emsdk_portable/emsdk_env.sh
