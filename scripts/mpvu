@@ -1,0 +1,20 @@
+#!/bin/bash
+
+# Single instance option for mpv media player.
+# If an instance of mpv is already playing AND it's using
+# the /tmp/mpvsocket-unique as its ipc input file
+# then we simply tell that process via IPC to play this new file.
+# If no instance of mpv is playing we start a new one with the unique
+# ipc input.
+
+if pidof mpv
+  then
+    echo "mpv already running will add file $1"
+    #echo '{ "command": ["loadfile", '"$1"', "replace"] }' | socat - /tmp/mpvsocket-unique
+    #echo '{ "command": ["loadfile", "'"$1"'", "replace"] }'
+    echo '{ "command": ["loadfile", "'"$1"'", "replace"] }' | socat - /tmp/mpvsocket-unique
+
+  else
+    # start mpv
+    mpv "$@" --input-ipc-server=/tmp/mpvsocket-unique
+fi

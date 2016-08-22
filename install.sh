@@ -5,6 +5,7 @@ VIMRC=.vimrc
 DIRCOLORS=.dircolors
 RANGER=rc.conf
 MPV=mpv.conf
+SCRIPTS=scripts
 
 #install our current bashrc
 cp ${BASHRC} ${HOME}/
@@ -20,3 +21,5 @@ cp ${RANGER} ${HOME}/.config/ranger/
 
 cp ${MPV} ~/.config/mpv/
 
+#other assorted scripts
+cp -r ${SCRIPTS} ~
