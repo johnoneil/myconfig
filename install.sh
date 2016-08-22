@@ -4,6 +4,7 @@ BASHRC=.bashrc
 VIMRC=.vimrc
 DIRCOLORS=.dircolors
 RANGER=rc.conf
+MPV=mpv.conf
 
 #install our current bashrc
 cp ${BASHRC} ${HOME}/
@@ -16,4 +17,6 @@ cp ${DIRCOLORS} ${HOME}/
 
 #install ranger file manager conf
 cp ${RANGER} ${HOME}/.config/ranger/
+
+cp ${MPV} ~/.config/mpv/
 

@@ -148,3 +148,5 @@ export TERMINAL=gnome-terminal
 
 # source emscripten sdk setup
 source /home/on-three/code/emsdk_portable/emsdk_env.sh
+
+PATH=${HOME}/scripts:${PATH}
