@@ -7,11 +7,15 @@ class Person: public entity
 :public
   int whut(){return 0;}
 
+  // This is a dummy method
   int GetSomeValue(const arg* one, const arg* two)
   {
     return 0;
   }
 
+  /*
+   * and this too
+   */
   void CallNothing():const
   {
     //nothing to see here

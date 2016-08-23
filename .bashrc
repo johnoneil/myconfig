@@ -1,4 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
+# ~/.bashrc: executed by bash(1) for non-login shellsm
 # see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
 # for examples
 
@@ -35,6 +35,8 @@ if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
     debian_chroot=$(cat /etc/debian_chroot)
 fi
 
+export TERM="xterm-256color"
+
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
     xterm|xterm-color|*-256color) color_prompt=yes;;
@@ -60,7 +62,7 @@ if [ "$color_prompt" = yes ]; then
     if [[ ${EUID} == 0 ]] ; then
         PS1='${debian_chroot:+($debian_chroot)}\[\033[01;31m\]\h\[\033[01;34m\] \W \$\[\033[00m\] '
     else
-        PS1='${debian_chroot:+($debian_chroot)}\[\033[34m\]\u@\h:\[\033[36m\]\W\[\033[34m\]$\[\033[00m\] '
+        PS1='${debian_chroot:+($debian_chroot)}\[\033[34m\]\u@\h:\[\033[01;37m\]\W\[\033[00;34m\]$\[\033[00m\] '
     fi
 else
     PS1='${debian_chroot:+($debian_chroot)}\u@\h \w \$ '
@@ -140,6 +142,8 @@ alias egrep='egrep --color=auto'
                           
 alias less='less -R'
 
+# need 256 color terminal to get proper vim colors
+alias vim='TERM=xterm-256color && vim'
 
 # choose a default terminal
 # under i3, i3-sensible-terminal uses x-terminal-emulator, urxvt, rxvt, terminator etc

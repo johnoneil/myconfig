@@ -158,11 +158,14 @@ set tags=./.tags,./tags;$HOME
 syntax enable 
 
 try
-    colorscheme Tomorrow-Night-Bright
+    colorscheme solarized8_dark_high
 catch
 endtry
 
 set background=dark
+
+" Transparent background
+hi Normal ctermbg=NONE
 
 " Set extra options when running in GUI mode
 if has("gui_running")
