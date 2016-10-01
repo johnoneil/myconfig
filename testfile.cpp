@@ -2,6 +2,13 @@
 
 #include "emscripten.h"
 
+class Thing : public Person
+{
+public:
+  Thing();
+  ~Thing();
+}
+
 class Person: public entity
 {
 :public
@@ -33,4 +40,26 @@ class Person: public entity
 int main(int argc, char* argv[])
 {
   exit(-1);
+}
+
+
+int anotherfunction(){
+  //hey that bracket matching works
+}
+/*
+ *
+ *
+ *
+ * 
+ * */
+
+int yetanotherfunc(){
+  if(true)
+  {
+    anotherfunction("hello there today...");//my quotes match!
+  }
+  else
+  {
+
+  }
 }
