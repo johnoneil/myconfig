@@ -1,0 +1,12 @@
+
+partial modifier_keys
+xkb_symbols "esc_break_caps" {
+  key <ESC> {
+    type = "ALPHABETIC",
+    actions [Group1] = [
+      SetMods(modifiers=none),
+      SetMods(modifiers=Lock,clearLocks)
+    ]
+  };
+};
+

@@ -49,6 +49,9 @@ set history=500
 " I like line numbers
 set number
 
+" Try to make ESC keypresses faster
+set timeoutlen=1000 ttimeoutlen=0
+
 " Enable filetype plugins
 "filetype on
 "filetype plugin on
@@ -78,6 +81,7 @@ Plugin 'neocomplcache'
 Plugin 'Tagbar'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'Syntastic'
+Plugin 'octol/vim-cpp-enhanced-highlight'
 
 " The following are examples of different formats supported.
 " Keep Plugin commands between vundle#begin/end.
@@ -277,8 +281,8 @@ vnoremap <silent> # :<C-u>call VisualSelection('', '')<CR>?<C-R>=@/<CR><CR>
 " => Visual mode related
 """"""""""""""""""""""""""""""
 " tab indent and unindent without losing visual block
-vmap <Tab> >gv
-vmap <S-Tab> <gv
+vmap > >gv
+vmap < <gv
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
