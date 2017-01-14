@@ -142,6 +142,8 @@ alias egrep='egrep --color=auto'
                           
 alias less='less -R'
 
+alias l="ls -lrt"
+
 # need 256 color terminal to get proper vim colors
 alias vim='TERM=xterm-256color && vim'
 
@@ -154,3 +156,8 @@ export TERMINAL=gnome-terminal
 source /home/on-three/code/emsdk_portable/emsdk_env.sh
 
 PATH=${HOME}/scripts:${PATH}
+
+
+export WORKON_HOME=$HOME/.virtualenvs
+export MSYS_HOME=/c/msys/1.0
+source /usr/local/bin/virtualenvwrapper.sh
