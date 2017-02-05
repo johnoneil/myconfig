@@ -3,7 +3,12 @@
 for i in *.ts
 do
   echo $i
-  if [ ! -f "${i}.ass" ] && [ ! -f "${i}.nosubs" ]; then
+  if [ -f "${i}.nosubs" ]; then
+    echo "file: ${i}.nosubs exists so skipping file."
+    continue
+  fi
+
+  if [ ! -f "${i}.ass" ]; then
     echo "generating file: ${i}.ass"
     arib-ts2ass "$i"
   fi
