@@ -31,6 +31,7 @@ exec unclutter
 
 #mount our network drives
 exec "sshfs joneil@192.168.1.140:/media/sata/incoming ~/incoming"
+exec "sshfs joneil@192.168.1.140:/incoming2 ~/incoming2"
 exec "sshfs joneil@192.168.1.140:/media/sata/pictures ~/Pictures"
 
 #start chromium in right window
@@ -61,6 +62,9 @@ set $mod Mod4
 # is used in the bar {} block below.
 font pango:Noto Sans 14px
 
+
+#prevent focus from changing via mouse hover
+focus_follows_mouse no
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
